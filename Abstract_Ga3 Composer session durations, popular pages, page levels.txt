@@ -1,0 +1,13 @@
+Introduction:
+
+The purpose of this project is to build a comprehensive Key Performance Indicators (KPI) dashboard for user-generated sessions on our website, leveraging the data tracked by Google Analytics 360. To achieve this, we will utilize Google Cloud Platform (GCP) and Cloud Composer. The raw event data will be stored in BigQuery tables, and we will implement a multi-hop architecture to transform and refine the data.
+
+The multi-hop architecture will consist of three stages: bronze, silver, and gold. In the bronze stage, the raw event data will be ingested into BigQuery and stored as partitioned data. This partitioning will allow for efficient querying and processing of the data. The silver stage will involve extracting and transforming sessions from both the web and app platforms, aggregating the data to provide a holistic view of user activity. Finally, in the gold stage, we will calculate the KPIs based on the refined data, which will provide valuable insights into user behavior and website performance.
+
+The KPIs we will focus on include identifying popular pages on the website by country and device, analyzing user activity based on time (day, hour), and determining the number of successful hits, which will be measured by users visiting multiple page levels within a session. Additionally, we will categorize session durations into high, medium, and low ranges, providing insights into user engagement on a daily, hourly, platform, and country-wise basis.
+
+To visualize and present the KPI data, we will connect the gold stage to Looker Studio, a powerful data visualization and reporting tool. Looker Studio will enable us to create intuitive and interactive dashboards, allowing stakeholders to easily explore and understand the performance metrics. The KPIs will provide detailed information about the country, device, and platform associated with user sessions, enabling us to identify trends and patterns in user behavior.
+
+Throughout the project, all the code and lineage will be maintained within Cloud Composer. Composer will facilitate the scheduling and orchestration of the bronze, silver, and gold workflows, ensuring that the data pipeline operates smoothly and efficiently. By utilizing Composer, we can automate the data processing tasks and ensure the timely generation of up-to-date KPIs.
+
+In conclusion, this project aims to build a robust KPI dashboard for user-generated sessions on our website. Leveraging Google Analytics 360, GCP, and Cloud Composer, we will transform raw event data into valuable insights about user behavior and website performance. The resulting KPIs will be visualized using Looker Studio, enabling stakeholders to make informed decisions and optimize the user experience.
